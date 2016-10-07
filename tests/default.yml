@@ -1,4 +1,8 @@
 ---
+
+- name: install openssh on docker container
+  package: name=openssh-server state=present
+
 - name: wrapper playbook for kitchen testing "ansible-ssh-hardening" with custom settings
   hosts: localhost
   roles:

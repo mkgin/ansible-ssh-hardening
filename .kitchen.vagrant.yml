@@ -12,7 +12,7 @@ provisioner:
   require_ruby_for_busser: false
   ansible_verbose: true
   roles_path: ../ansible-ssh-hardening/
-  playbook: default.yml
+  playbook: tests/default.yml
 
 platforms:
 - name: ubuntu-12.04

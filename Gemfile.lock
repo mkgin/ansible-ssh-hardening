@@ -1,0 +1,424 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    CFPropertyList (2.3.3)
+    addressable (2.4.0)
+    artifactory (2.3.3)
+    builder (3.2.2)
+    chef-config (12.13.37)
+      fuzzyurl
+      mixlib-config (~> 2.0)
+      mixlib-shellout (~> 2.0)
+    coderay (1.1.1)
+    colorize (0.8.1)
+    coveralls (0.8.15)
+      json (>= 1.8, < 3)
+      simplecov (~> 0.12.0)
+      term-ansicolor (~> 1.3)
+      thor (~> 0.19.1)
+      tins (>= 1.6.0, < 2)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    diff-lcs (1.2.5)
+    docile (1.1.5)
+    docker-api (1.31.0)
+      excon (>= 0.38.0)
+      json
+    erubis (2.7.0)
+    excon (0.52.0)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    ffi (1.9.14)
+    ffi-yajl (2.3.0)
+      libyajl2 (~> 1.2)
+    fission (0.5.0)
+      CFPropertyList (~> 2.2)
+    fog (1.38.0)
+      fog-aliyun (>= 0.1.0)
+      fog-atmos
+      fog-aws (>= 0.6.0)
+      fog-brightbox (~> 0.4)
+      fog-cloudatcost (~> 0.1.0)
+      fog-core (~> 1.32)
+      fog-dynect (~> 0.0.2)
+      fog-ecloud (~> 0.1)
+      fog-google (<= 0.1.0)
+      fog-json
+      fog-local
+      fog-openstack
+      fog-powerdns (>= 0.1.1)
+      fog-profitbricks
+      fog-rackspace
+      fog-radosgw (>= 0.0.2)
+      fog-riakcs
+      fog-sakuracloud (>= 0.0.4)
+      fog-serverlove
+      fog-softlayer
+      fog-storm_on_demand
+      fog-terremark
+      fog-vmfusion
+      fog-voxel
+      fog-vsphere (>= 0.4.0)
+      fog-xenserver
+      fog-xml (~> 0.1.1)
+      ipaddress (~> 0.5)
+    fog-aliyun (0.1.0)
+      fog-core (~> 1.27)
+      fog-json (~> 1.0)
+      ipaddress (~> 0.8)
+      xml-simple (~> 1.1)
+    fog-atmos (0.1.0)
+      fog-core
+      fog-xml
+    fog-aws (0.11.0)
+      fog-core (~> 1.38)
+      fog-json (~> 1.0)
+      fog-xml (~> 0.1)
+      ipaddress (~> 0.8)
+    fog-brightbox (0.11.0)
+      fog-core (~> 1.22)
+      fog-json
+      inflecto (~> 0.0.2)
+    fog-cloudatcost (0.1.2)
+      fog-core (~> 1.36)
+      fog-json (~> 1.0)
+      fog-xml (~> 0.1)
+      ipaddress (~> 0.8)
+    fog-core (1.42.0)
+      builder
+      excon (~> 0.49)
+      formatador (~> 0.2)
+    fog-dynect (0.0.3)
+      fog-core
+      fog-json
+      fog-xml
+    fog-ecloud (0.3.0)
+      fog-core
+      fog-xml
+    fog-google (0.1.0)
+      fog-core
+      fog-json
+      fog-xml
+    fog-json (1.0.2)
+      fog-core (~> 1.0)
+      multi_json (~> 1.10)
+    fog-local (0.3.0)
+      fog-core (~> 1.27)
+    fog-openstack (0.1.12)
+      fog-core (>= 1.40)
+      fog-json (>= 1.0)
+      ipaddress (>= 0.8)
+    fog-powerdns (0.1.1)
+      fog-core (~> 1.27)
+      fog-json (~> 1.0)
+      fog-xml (~> 0.1)
+    fog-profitbricks (0.0.5)
+      fog-core
+      fog-xml
+      nokogiri
+    fog-rackspace (0.1.1)
+      fog-core (>= 1.35)
+      fog-json (>= 1.0)
+      fog-xml (>= 0.1)
+      ipaddress (>= 0.8)
+    fog-radosgw (0.0.5)
+      fog-core (>= 1.21.0)
+      fog-json
+      fog-xml (>= 0.0.1)
+    fog-riakcs (0.1.0)
+      fog-core
+      fog-json
+      fog-xml
+    fog-sakuracloud (1.7.5)
+      fog-core
+      fog-json
+    fog-serverlove (0.1.2)
+      fog-core
+      fog-json
+    fog-softlayer (1.1.4)
+      fog-core
+      fog-json
+    fog-storm_on_demand (0.1.1)
+      fog-core
+      fog-json
+    fog-terremark (0.1.0)
+      fog-core
+      fog-xml
+    fog-vmfusion (0.1.0)
+      fission
+      fog-core
+    fog-voxel (0.1.0)
+      fog-core
+      fog-xml
+    fog-vsphere (1.0.1)
+      fog-core
+      rbvmomi (~> 1.8.0)
+    fog-xenserver (0.2.3)
+      fog-core
+      fog-xml
+    fog-xml (0.1.2)
+      fog-core
+      nokogiri (~> 1.5, >= 1.5.11)
+    foodcritic (4.0.0)
+      erubis
+      gherkin (~> 2.11)
+      nokogiri (~> 1.5)
+      rake
+      rufus-lru (~> 1.0)
+      treetop (~> 1.4)
+      yajl-ruby (~> 1.1)
+    formatador (0.2.5)
+    fuzzyurl (0.9.0)
+    gherkin (2.12.2)
+      multi_json (~> 1.3)
+    git (1.3.0)
+    github_api (0.14.5)
+      addressable (~> 2.4.0)
+      descendants_tracker (~> 0.0.4)
+      faraday (~> 0.8, < 0.10)
+      hashie (>= 3.4)
+      oauth2 (~> 1.0)
+    github_changelog_generator (1.13.1)
+      colorize (~> 0.7)
+      github_api (~> 0.12)
+      rake (>= 10.0)
+    gssapi (1.2.0)
+      ffi (>= 1.0.1)
+    guard (2.14.0)
+      formatador (>= 0.2.4)
+      listen (>= 2.7, < 4.0)
+      lumberjack (~> 1.0)
+      nenv (~> 0.1)
+      notiffany (~> 0.0)
+      pry (>= 0.9.12)
+      shellany (~> 0.0)
+      thor (>= 0.18.1)
+    guard-compat (1.2.1)
+    guard-kitchen (0.0.2)
+      guard
+      mixlib-shellout
+    guard-rspec (4.7.3)
+      guard (~> 2.1)
+      guard-compat (~> 1.1)
+      rspec (>= 2.99.0, < 4.0)
+    gyoku (1.3.1)
+      builder (>= 2.1.2)
+    hashie (3.4.4)
+    httpclient (2.8.2.3)
+    inflecto (0.0.2)
+    inspec (0.33.2)
+      hashie (~> 3.4)
+      json (>= 1.8, < 3.0)
+      method_source (~> 0.8)
+      mixlib-log
+      parallel (~> 1.9)
+      pry (~> 0)
+      rainbow (~> 2)
+      rspec (~> 3)
+      rspec-its (~> 1.2)
+      rubyzip (~> 1.1)
+      sslshake (~> 1)
+      thor (~> 0.19)
+      train (>= 0.19.0, < 1.0)
+    ipaddress (0.8.3)
+    json (2.0.2)
+    jwt (1.5.4)
+    kitchen-ansible (0.45.4)
+      net-ssh (~> 3.0)
+      test-kitchen (~> 1.4)
+    kitchen-docker (2.5.0)
+      test-kitchen (>= 1.0.0)
+    kitchen-inspec (0.15.1)
+      inspec (>= 0.22.0, < 1.0.0)
+      test-kitchen (~> 1.6)
+    kitchen-openstack (3.1.0)
+      fog (~> 1.33)
+      ohai
+      test-kitchen (~> 1.4, >= 1.4.1)
+      unf
+    kitchen-sharedtests (0.2.0)
+      git
+    kitchen-sync (2.1.1)
+      net-sftp
+      test-kitchen (>= 1.0.0)
+    kitchen-transport-rsync (0.1.2)
+      test-kitchen (~> 1.4)
+    kitchen-vagrant (0.20.0)
+      test-kitchen (~> 1.4)
+    libyajl2 (1.2.0)
+    listen (3.1.5)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
+    little-plugger (1.1.4)
+    logging (2.1.0)
+      little-plugger (~> 1.1)
+      multi_json (~> 1.10)
+    lumberjack (1.0.10)
+    method_source (0.8.2)
+    mini_portile2 (2.1.0)
+    mixlib-cli (1.7.0)
+    mixlib-config (2.2.4)
+    mixlib-install (1.1.0)
+      artifactory
+      mixlib-shellout
+      mixlib-versioning
+    mixlib-log (1.7.1)
+    mixlib-shellout (2.2.7)
+    mixlib-versioning (1.1.0)
+    multi_json (1.12.1)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
+    nenv (0.3.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (3.2.0)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
+    nokogiri (1.6.8)
+      mini_portile2 (~> 2.1.0)
+      pkg-config (~> 1.1.7)
+    nori (2.6.0)
+    notiffany (0.1.1)
+      nenv (~> 0.1)
+      shellany (~> 0.0)
+    oauth2 (1.2.0)
+      faraday (>= 0.8, < 0.10)
+      jwt (~> 1.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
+    ohai (8.20.0)
+      chef-config (>= 12.5.0.alpha.1, < 13)
+      ffi (~> 1.9)
+      ffi-yajl (~> 2.2)
+      ipaddress
+      mixlib-cli
+      mixlib-config (~> 2.0)
+      mixlib-log (>= 1.7.1, < 2.0)
+      mixlib-shellout (~> 2.0)
+      plist (~> 3.1)
+      systemu (~> 2.6.4)
+      wmi-lite (~> 1.0)
+    parallel (1.9.0)
+    pkg-config (1.1.7)
+    plist (3.2.0)
+    polyglot (0.3.5)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    rack (2.0.1)
+    rainbow (2.1.0)
+    rake (11.2.2)
+    rb-fsevent (0.9.7)
+    rb-inotify (0.9.7)
+      ffi (>= 0.5.0)
+    rbvmomi (1.8.2)
+      builder
+      nokogiri (>= 1.4.1)
+      trollop
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.3)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
+    ruby_dep (1.4.0)
+    rubyntlm (0.6.0)
+    rubyzip (1.2.0)
+    rufus-lru (1.1.0)
+    safe_yaml (1.0.4)
+    shellany (0.0.1)
+    simplecov (0.12.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
+    slop (3.6.0)
+    sslshake (1.0.12)
+    systemu (2.6.5)
+    term-ansicolor (1.3.2)
+      tins (~> 1.0)
+    test-kitchen (1.12.0)
+      mixlib-install (~> 1.0, >= 1.0.4)
+      mixlib-shellout (>= 1.2, < 3.0)
+      net-scp (~> 1.1)
+      net-ssh (>= 2.9, < 4.0)
+      net-ssh-gateway (~> 1.2.0)
+      safe_yaml (~> 1.0)
+      thor (~> 0.18)
+    thor (0.19.1)
+    thor-foodcritic (0.2.0)
+      foodcritic
+      thor
+    thread_safe (0.3.5)
+    tins (1.12.0)
+    train (0.19.0)
+      docker-api (~> 1.26)
+      json (>= 1.8, < 3.0)
+      mixlib-shellout (~> 2.0)
+      net-scp (~> 1.2)
+      net-ssh (>= 2.9, < 4.0)
+      winrm (~> 2.0)
+      winrm-fs (~> 1.0)
+    treetop (1.6.8)
+      polyglot (~> 0.3)
+    trollop (2.1.2)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
+    winrm (2.0.1)
+      builder (>= 2.1.2)
+      erubis (~> 2.7)
+      gssapi (~> 1.2)
+      gyoku (~> 1.0)
+      httpclient (~> 2.2, >= 2.2.0.2)
+      logging (>= 1.6.1, < 3.0)
+      nori (~> 2.0)
+      rubyntlm (~> 0.6.0)
+    winrm-fs (1.0.0)
+      erubis (~> 2.7)
+      logging (>= 1.6.1, < 3.0)
+      rubyzip (~> 1.1)
+      winrm (~> 2.0)
+    wmi-lite (1.0.0)
+    xml-simple (1.1.5)
+    yajl-ruby (1.2.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  coveralls
+  foodcritic (~> 4.0)
+  github_changelog_generator (~> 1)
+  guard
+  guard-kitchen
+  guard-rspec
+  kitchen-ansible
+  kitchen-docker
+  kitchen-inspec
+  kitchen-openstack
+  kitchen-sharedtests (~> 0.2.0)
+  kitchen-sync
+  kitchen-transport-rsync
+  kitchen-vagrant
+  rake
+  test-kitchen (~> 1.0)
+  thor-foodcritic
+
+BUNDLED WITH
+   1.12.5

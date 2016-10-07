@@ -6,7 +6,6 @@ test/integration
 coverage
 Vagrantfile.erb
 
-Gemfile.lock
 Berksfile.lock
 
 ansible.cfg

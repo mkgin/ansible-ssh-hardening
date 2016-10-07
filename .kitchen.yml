@@ -17,7 +17,7 @@ provisioner:
   ansible_diff: true
   hosts: all
   roles_path: ../ansible-ssh-hardening/
-  playbook: default.yml
+  playbook: tests/default.yml
 
 platforms:
 - name: ubuntu-12.04
