@@ -1,22 +1,39 @@
 ---
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
-language: python
-python: "2.7"
+services: docker
 
 env:
-  - ANSIBLE_VERSION=latest
-  - ANSIBLE_VERSION=1.9.4
+  - distro: centos7
+    init: /usr/lib/systemd/systemd
+    run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
+#  - distro: centos6
+#    init: /sbin/init
+#    run_opts: ""
+#  - distro: fedora24
+#    init: /usr/lib/systemd/systemd
+#    run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
+#  - distro: ubuntu1604
+#    init: /lib/systemd/systemd
+#    run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
+#  - distro: ubuntu1404
+#    init: /sbin/init
+#    run_opts: ""
+#  - distro: ubuntu1204
+#    init: /sbin/init
+#    run_opts: ""
+#  - distro: debian8
+#    init: /lib/systemd/systemd
+#    run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
 
 before_install:
- - sudo apt-get update -qq
- - sudo apt-get install -qq python-apt python-pycurl
-install:
-  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
-  - echo -e 'localhost ansible_connection=local' > spec/inventory
-  - echo -e '[defaults]\nroles_path = ../\nhostfile = ./spec/inventory' > ansible.cfg
+  # Pull container.
+  - 'docker pull geerlingguy/docker-${distro}-ansible:latest'
 
 script:
-  - ansible-playbook --syntax-check spec/travis.yml
-  - ansible-playbook --sudo -v --diff spec/travis.yml
-  - ansible-playbook --sudo -v --diff spec/travis.yml --extra-vars "network_ipv6_enable=true ssh_allow_root_with_key=true ssh_client_password_login=true ssh_client_cbc_required=true ssh_server_weak_hmac=true ssh_client_weak_kex=true sftp_enabled=true"
+  - container_id=$(mktemp)
+  # Run container in detached state.
+  - 'docker run --detach --volume="${PWD}":/etc/ansible/roles/role_under_test:ro ${run_opts} geerlingguy/docker-${distro}-ansible:latest "${init}" > "${container_id}"'
+
+  # Test role.
+  - 'docker exec --tty "$(cat ${container_id})" env TERM=xterm ansible-playbook /etc/ansible/roles/role_under_test/default.yml'
