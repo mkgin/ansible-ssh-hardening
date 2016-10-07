@@ -6,6 +6,9 @@
   - name: install openssh
     package: name=openssh-server state=present
 
+  - name: create privilege separation dir
+    file: path="/var/run/sshd" state=directory
+
 - name: wrapper playbook for kitchen testing "ansible-ssh-hardening" with custom settings
   hosts: localhost
   roles:
