@@ -4,7 +4,12 @@
   hosts: localhost
   tasks:
   - name: install openssh
-    package: name=openssh-server state=present
+    yum: name=openssh-server state=present update_cache=yes
+    ignore_errors: true
+
+  - name: install openssh
+    apt: name=openssh-server state=present update_cache=yes
+    ignore_errors: true
 
   - name: create privilege separation dir
     file: path="/var/run/sshd" state=directory
