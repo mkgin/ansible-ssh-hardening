@@ -42,6 +42,8 @@ This role provides secure ssh-client and ssh-server configurations.
 |`sftp_enabled` | false | true to enable sftp configuration|
 |`sftp_chroot_dir` | /home/%u | change default sftp chroot location|
 |`ssh_client_roaming` | false | enable experimental client roaming|
+|`ssh_challengeresponseauthentication` | false | Specifies whether challenge-response authentication is allowed (e.g. via PAM) |
+
 
 ## Example Playbook
 
